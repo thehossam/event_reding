@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: blueviolet;
+    height: 100vh;
+    padding: 10px;
+
+}
+.container{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    white-space: nowrap;
+    animation: width 3s steps(5) infinite;
+    overflow: hidden;
+    -webkit-animation: width 3s steps(5) infinite;
+}
+.container p{
+    display: inline;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    right: 0;
+    top: 0;
+    background-color: white;
+    animation: op 0.5s linear infinite;
+    -webkit-animation: op 0.5s linear infinite;
+}
+@keyframes op {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes width {
+
+    50%{
+        width: 100px;
+    }
+}
+
+
+
